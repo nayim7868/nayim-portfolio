@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: {
@@ -18,8 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-[#080b12] text-white antialiased">
+    <html
+      lang="en"
+      className={cn(GeistSans.variable, GeistMono.variable, "scroll-smooth")}
+    >
+      <body
+        className={cn(
+          GeistSans.className,
+          "site-canvas min-h-screen text-white antialiased",
+        )}
+      >
         <Header />
         <main>{children}</main>
         <Footer />

@@ -1,5 +1,6 @@
 export const siteConfig = {
     name: "Nayim Salam",
+    brandLabel: "Engineering Portfolio",
     domain: "nayimsalam.com",
     title: "Software engineer with an architecture-first approach.",
     description:
