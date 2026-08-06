@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ProofModule } from "@/components/ui/ProofModule";
 import { proofItems } from "@/config/portfolio";
+
+export const metadata: Metadata = {
+  title: "Background",
+  description:
+    "Education, industry exposure, and commercial context behind Nayim Salam's systems engineering work.",
+  alternates: { canonical: "/background" },
+};
 
 export default function BackgroundPage() {
   return (

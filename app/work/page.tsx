@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { WorkflowDiagram } from "@/components/home/WorkflowDiagram";
 import { featuredProjects } from "@/config/portfolio";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Work",
+  description:
+    "Selected systems work: case studies framed by workflow, state, reliability, and MVP judgement.",
+  alternates: { canonical: "/work" },
+};
 
 export default function WorkPage() {
   return (

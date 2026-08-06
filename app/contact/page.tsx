@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Nayim Salam about software engineering roles, collaboration, and systems work.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (
